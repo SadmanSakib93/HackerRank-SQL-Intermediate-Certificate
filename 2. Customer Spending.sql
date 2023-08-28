@@ -1,4 +1,4 @@
-SELECT c.customer_name, CAST(SUM(i.total_price), AS DECIMAL(9,6)) AS total
+SELECT c.customer_name, CAST(SUM(i.total_price) AS DECIMAL(9,6)) AS total
 FROM customer c
 INNER JOIN invoice i ON c.id=i.customer_id
 GROUP BY c.customer_name
